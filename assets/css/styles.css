@@ -7,10 +7,10 @@ body {
   display: flex;
   margin: auto;
   margin-top: 20px;
-  height: 30px;
+  height: 40px;
 }
 
-input {
+.localisation {
   margin-top: 20px;
   height: 30px;
   width: 100%;
@@ -45,7 +45,7 @@ input {
   text-decoration: none;
   color: white;
   border-radius: 40px;
-  background-color: #9356DC;
+  background-color: #CD69DB;
   transition: opacity 0.3s;
 }
 .button:hover {
@@ -71,6 +71,7 @@ input {
   height: 50px;
   border-radius: 20px;
   justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 .group4 i {
@@ -84,6 +85,7 @@ input {
   height: 50px;
   border-radius: 20px;
   justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 .group5 i {
@@ -97,6 +99,18 @@ input {
   height: 50px;
   border-radius: 20px;
   justify-content: center;
+  align-items: center;
+}
+
+span {
+  position: absolute;
+  left: 2.7em;
+  border-radius: 50%;
+  line-height: 1.5em;
+  width: 20px;
+  background-color: #9356DC;
+  text-align: center;
+  color: white;
 }
 
 .restaurants {
@@ -174,6 +188,10 @@ footer ul {
 }
 footer a {
   text-decoration: none;
+  color: white;
+}
+footer img {
+  height: 150px;
 }
 
 .footercontent {
@@ -188,6 +206,110 @@ footer a {
 
 #Logo {
   height: 20px;
+  margin-top: 10px;
+  color: white;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  height: 30px;
+}
+
+.backgroundimg {
+  width: 100%;
   margin-top: 30px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.container {
+  background-color: #f6f6f6;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 40px 40px 0 0;
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+h1 {
+  padding-top: 30px;
+}
+@media (min-width: 1024px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+.assiette {
+  background-color: white;
+  border-radius: 20px;
+}
+.assiette h3 {
+  margin-left: 20px;
+}
+.assiette p {
+  margin-left: 20px;
+}
+@media (min-width: 1024px) {
+  .assiette {
+    width: 500px;
+    justify-content: center;
+  }
+}
+
+.button {
+  display: flex;
+  margin: auto;
+  height: 40px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 40px;
+  text-decoration: none;
+  color: white;
+  border-radius: 40px;
+  background-color: #9356DC;
+}
+
+footer {
+  background-color: #353535;
+  height: 200px;
+}
+footer ul {
+  list-style: none;
+}
+footer a {
+  text-decoration: none;
+}
+
+.footercontent {
+  margin-left: 20px;
+}
+@media (min-width: 1024px) {
+  .footercontent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .footercontent ul {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+#Logo {
+  height: 60px;
+  margin-top: 10px;
   color: white;
 }/*# sourceMappingURL=styles.css.map */
