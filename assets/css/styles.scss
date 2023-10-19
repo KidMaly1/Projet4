@@ -5,6 +5,7 @@
 body {
     margin: 0;
     width: 100%;
+    font-family: 'Inter', sans-serif;
 }
 
 .logo {
@@ -21,6 +22,8 @@ body {
     background-color: $second-color;
 }
 
+
+
 .reserver {
     background-color: $primary-color;
     height: 340px;
@@ -29,12 +32,16 @@ body {
     padding-top: 50px;
     display: flex;
     text-align: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
     }
 }
 
 .reserver p {
     display: flex;
     text-align: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
 }   
 
 .button {
@@ -56,6 +63,14 @@ body {
     }
 }
 
+h2 {
+    margin-left: 20px;
+    font-family: 'Inter', sans-serif;
+    @media (min-width: 1024px) {
+        margin-left: 150px;
+    }
+}
+
 .fonctionnement {
     display: flex;
     flex-direction: column;
@@ -67,7 +82,7 @@ body {
     
 }
 
-.group4 {
+.group {
     display: flex;
     background-color: $primary-color;
     width: 100%;
@@ -76,41 +91,24 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
     i {
         color: black;
     }
-}
-
-.group5 {
-    display: flex;
-    background-color: $primary-color;
-    width: 100%;
-    height: 50px;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    i {
-        color: black;
+    @media (min-width: 1024px) {
+        margin: 30px;
+        margin-left: 100px;
+        
     }
-}
-
-.group6 {
-    display: flex;
-    background-color: $primary-color;
-    width: 100%;
-    height: 50px;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
 }
 
 span {
     position: absolute;
-    left: 2.7em;
+    left: -0.5em;
     border-radius: 50%;
     line-height: 1.5em;
     width: 20px;
+    height: 20px;
     background-color: #9356DC;
     text-align: center;
     color: white;
@@ -118,7 +116,14 @@ span {
 
 .restaurants {
     background-color: $primary-color;
-    height: 1200px;
+    height: 1300px;
+    padding-top: 50px;
+    .choix {
+        margin-left: 20px;
+        @media (min-width: 1024px) {
+            margin-left: 160px;
+        }
+    }
     @media (min-width: 1024px) {
         height: fit-content;
     }
@@ -139,22 +144,62 @@ span {
 
 .card {
     background-color: white;
-    height: 250px;
+    height: 280px;
     margin: 20px;
     border-radius: 20px;
     text-decoration: none;
+    position: relative;
+    h3 {
+        margin-left: 20px;
+        @media (min-width: 1024px) {
+            margin-top: 10px;
+        }
+    }
+    p {
+        margin-left: 20px;
+    }
     @media (min-width: 1024px) {
         width: 500px;
+        height: 320px;
+    }
+    .nouveau {
+        background-color: aquamarine;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+    .like {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 25px;
+        bottom: 40px;
+        &:hover {
+            background-color: aqua;
+        }
+    }
+
+    .card-text {
+        position: relative;
+        i {
+            position: absolute;
+            border: none;
+            margin: 87px;
+            font-size: 20px;
+            background-color: aquamarine;
+        }
     }
 }
 
 .card img {
-    height: 150px;
+    height: 190px;
     width: 100%;
     border-radius: 20px 20px 0 0;
+    object-fit: cover;
     @media (min-width: 1024px) {
         width: 100%;
-        height: 170px;
+        height: 240px;
+        object-fit: cover;
     }
 }
 
@@ -222,6 +267,13 @@ margin-top: 20px;
 height: 30px;
 }
 
+.background {
+    @media (min-width: 1024px) {
+        height: 700px;
+        overflow: hidden;
+    }
+}
+
 .backgroundimg {
     width: 100%;
     margin-top: 30px;
@@ -229,34 +281,80 @@ height: 30px;
 }
 
 .container {
+    display: flex;
     background-color: $primary-color;
     height: max-content;
     border-radius: 40px 40px 0 0;
+    flex-direction: column;
     @media (min-width: 1024px) {
-        width: 1000px;
+        width: 80%;
         margin: 0 auto;
+        display: flex;
+        
     }
 }
 
 h1 {
     padding-top: 30px;
+    margin-left: 20px;
+    font-family: 'Shrikhand', serif;
     @media (min-width: 1024px) {
         text-align: center;
+    }
+}
+
+.all {
+    text-decoration: underline;
+    text-decoration-color: aquamarine;
+    margin-left: 20px;
+    @media (min-width: 1024px) {
+        margin-left: 190px;
     }
 }
 
 .assiette {
     background-color: white;
     border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    .card-text {
+        display: flex;
+        flex-wrap: wrap;
+    }
     h3 {
         margin-left: 20px;
     }
     p {
         margin-left: 20px;
     }
-    @media (min-width: 1024px) {
-        width: 500px;
+    .check {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+    .validatecheck {
+        display: flex;
+        align-items: center;
         justify-content: center;
+        color: white;
+        background-color: aquamarine;
+        font-size: 25px;
+        height: 85px;
+        width: 30%;
+        transition: 1s;
+        transform: scaleX(0);
+        @keyframes validatecheck {
+            0% {
+                transform: scaleX(0);
+            }
+            100% {
+                transform: scaleX(1);
+            }
+        }
+    }
+    @media (min-width: 1024px) {
+        width: 700px;
+        margin: auto;
     }
 }
 
@@ -278,11 +376,20 @@ h1 {
 footer {
     background-color: #353535;
     height: 200px;
+    @media (min-width: 1024px) {
+        height: 150px;
+        li {
+            padding-right: 20px;
+        }
+    }
     ul {
         list-style: none;
     }
     a {
         text-decoration: none;
+    }
+    i {
+        padding-right: 10px;
     }
 }
 
@@ -294,6 +401,9 @@ footer {
         ul {
             display: flex;
             flex-wrap: nowrap;
+            @media (min-width: 1024px) {
+                margin-top: 100px;
+            }
         }
     }
     }
@@ -302,9 +412,12 @@ footer {
     height: 60px;
     margin-top: 10px;
     color: white;
+    @media (min-width: 1024px) {
+        margin-top: 60px;
+    }
 }
  
-footer
+
 
 
 

@@ -6,24 +6,38 @@
     <title>OhMyFood</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;700&family=Noto+Sans+JP:wght@300&family=Roboto:ital@0;1&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <img class="logo" src="assets/images/Images+textes+Ohmyfood/images/logo/ohmyfood.png" alt="Logo ohmyfood">
     </header>
     <main>
+        <div class="background">
         <img class="backgroundimg" src="assets/images/Images+textes+Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant La palette du goût">
+        </div>
         <div class="container">
-            <h1><strong>La palette du goût</strong></h1>
+            <h1><strong>La palette du goût</strong></h1><i class="fa-thin fa-heart"></i>
             <div class="entrees">
-                <h2>ENTRÉES</h2>
+                <p class="all">ENTRÉES</p>
             <div class="assiette">
                 <h3>Fricassée d'escargots</h3>
                 <p>Au piment d'Espelette</p>
+                <div class="check">
+                <p class="prix">25€</p>
+                </div>
+                
             </div>
             <div class="assiette">
+                <div class="card-text">
                 <h3>Foie gras de canard mi-cuit</h3>
                 <p>Et ses copeaux de truffe noire</p>
+                <div class="validatecheck">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
             </div>
             <div class="assiette">
                 <h3>Oeufs au plat</h3>
@@ -31,7 +45,7 @@
             </div>
             </div>
             <div class="plats">
-            <h2>PLATS</h2>
+            <p class="all">PLATS</p>
             <div class="assiette">
                 <h3>Filet de boeuf aux herbes</h3>
                 <p>Accompagné de sa ribambelle de légumes</p>
@@ -46,7 +60,7 @@
             </div>
             </div>
             <div class="desserts">
-                <h2>DESSERTS</h2>
+                <p class="all">DESSERTS</p>
                 <div class="assiette">
                     <h3>Paris-Brest</h3>
                     <p>Revisité</p>
@@ -68,12 +82,26 @@
             <div class="footercontent">
                 <img src="assets/images/Images+textes+Ohmyfood/images/logo/Footer.png" alt="Logo ohmyfood" id="Logo">
                 <ul>
-                    <li><a href="#">Proposer un restaurant</a></li>
-                    <li><a href="#">Devenir partenaire</a></li>
+                    <div class="footerlist">
+                    <li>
+                        <a href="#">
+                        <i class="fa-solid fa-utensils"></i>
+                        Proposer un restaurant
+                    </a>
+                    </li>
+                    </div>
+                    <div class="footerlist">
+                    <li>
+                    <a href="#">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    Devenir partenaire
+                    </a>
+                    </li>
+                    </div>
                     <li><a href="#">Mentions légales</a></li>
                     <li><a href="#">Contact</a></li>
-                </ul>
                 </div>
+                </ul>
         </footer>
 </body>
 </html>
