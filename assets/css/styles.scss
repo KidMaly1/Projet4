@@ -174,9 +174,6 @@ span {
         height: 20px;
         right: 25px;
         bottom: 40px;
-        &:hover {
-            background-color: aqua;
-        }
     }
 
     .card-text {
@@ -223,6 +220,7 @@ span {
 footer {
     background-color: #353535;
     height: 300px;
+    margin-top: 1370px;
     ul {
         list-style: none;
     }
@@ -260,6 +258,33 @@ margin: 0;
 width: 100%;
 }
 
+.loader-container {
+    display: flex;
+    align-items: center;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid aquamarine;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+header {
+    display: flex;
+}
+
+.fleche {
+    padding-top: 20px;
+}
+
 .logo {
 display: flex;
 margin: auto;
@@ -278,18 +303,24 @@ height: 30px;
     width: 100%;
     margin-top: 30px;
     height: fit-content;
+    position: relative;
 }
 
 .container {
+    position: absolute;
+    top: 18em;
+    width: 100%;
     display: flex;
     background-color: $primary-color;
-    height: max-content;
+    height: 1450px;
     border-radius: 40px 40px 0 0;
     flex-direction: column;
     @media (min-width: 1024px) {
-        width: 80%;
-        margin: 0 auto;
+        width: 1100px;
+        margin: auto;
         display: flex;
+        top: 42em;
+        right: 8em;
         
     }
 }
@@ -308,7 +339,8 @@ h1 {
     text-decoration-color: aquamarine;
     margin-left: 20px;
     @media (min-width: 1024px) {
-        margin-left: 190px;
+        width: 700px;
+        margin:auto;
     }
 }
 
@@ -317,40 +349,38 @@ h1 {
     border-radius: 20px;
     width: 90%;
     margin: auto;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 1 ease, transform 0.5s ease;
     .card-text {
         display: flex;
         flex-wrap: wrap;
     }
-    h3 {
-        margin-left: 20px;
+    &:hover {
+        .validatecheck {
+            width: 3em;
+        }
     }
-    p {
-        margin-left: 20px;
-    }
-    .check {
+
+    .assiettedetail {
         display: flex;
-        justify-content: flex-end;
-        margin-right: 20px;
+        justify-content: space-between;
     }
+    
+
     .validatecheck {
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
         background-color: aquamarine;
+        border-radius: 0 15px 15px 0;
         font-size: 25px;
-        height: 85px;
-        width: 30%;
-        transition: 1s;
-        transform: scaleX(0);
-        @keyframes validatecheck {
-            0% {
-                transform: scaleX(0);
-            }
-            100% {
-                transform: scaleX(1);
-            }
-        }
+        height: auto;
+        margin-top: -40px;
+        width: 0;
+        transition: .5s ease .1s;
+        
     }
     @media (min-width: 1024px) {
         width: 700px;
@@ -376,6 +406,7 @@ h1 {
 footer {
     background-color: #353535;
     height: 200px;
+    
     @media (min-width: 1024px) {
         height: 150px;
         li {
@@ -395,6 +426,7 @@ footer {
 
 .footercontent {
     margin-left: 20px;
+    flex-direction: column;
     @media (min-width: 1024px) {
         display: flex;
         flex-direction: row-reverse;
