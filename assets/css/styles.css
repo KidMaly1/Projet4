@@ -4,6 +4,11 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+}
+
 .logo {
   display: flex;
   margin: auto;
@@ -183,6 +188,15 @@ span {
   right: 25px;
   bottom: 40px;
 }
+.card .like2 {
+  position: absolute;
+  color: #c064db;
+  width: 20px;
+  height: 20px;
+  right: 25px;
+  bottom: 40px;
+  overflow: hidden;
+}
 .card .card-text {
   position: relative;
 }
@@ -265,8 +279,21 @@ body {
 }
 
 .loader-container {
+  position: absolute;
   display: flex;
   align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+  transition: 0.75s, visibility 0.75s;
+}
+
+.loader-container--hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .loader {
@@ -301,6 +328,11 @@ header {
   height: 30px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 1024px) {
   .background {
     height: 700px;
@@ -318,11 +350,10 @@ header {
 
 .container {
   position: absolute;
-  top: 18em;
+  top: 20em;
   width: 100%;
   display: flex;
   background-color: #f6f6f6;
-  height: 1450px;
   border-radius: 40px 40px 0 0;
   flex-direction: column;
 }
@@ -336,6 +367,10 @@ header {
   }
 }
 
+.titlelike {
+  display: flex;
+}
+
 h1 {
   padding-top: 30px;
   margin-left: 20px;
@@ -345,6 +380,14 @@ h1 {
   h1 {
     text-align: center;
   }
+}
+
+.like3 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 40px;
+  top: 70px;
 }
 
 .all {
@@ -366,7 +409,8 @@ h1 {
   margin: auto;
   margin-bottom: 20px;
   opacity: 1;
-  transition: opacity 1 ease, transform 0.5s ease;
+  animation: cardprogres 1s;
+  transform-origin: 0% 50%;
 }
 .assiette .card-text {
   display: flex;
@@ -374,6 +418,14 @@ h1 {
 }
 .assiette:hover .validatecheck {
   width: 3em;
+}
+@keyframes cardprogres {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .assiette .assiettedetail {
   display: flex;
@@ -388,9 +440,12 @@ h1 {
   border-radius: 0 15px 15px 0;
   font-size: 25px;
   height: auto;
-  margin-top: -40px;
+  margin-top: -42px;
   width: 0;
   transition: 0.5s ease 0.1s;
+}
+.assiette .validatecheck i {
+  overflow: hidden;
 }
 @media (min-width: 1024px) {
   .assiette {
@@ -412,15 +467,18 @@ h1 {
   color: white;
   border-radius: 40px;
   background-color: #9356DC;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 footer {
   background-color: #353535;
   height: 200px;
+  margin-top: 1500px;
 }
 @media (min-width: 1024px) {
   footer {
     height: 150px;
+    margin-top: 100px;
   }
   footer li {
     padding-right: 20px;
