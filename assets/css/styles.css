@@ -4,6 +4,59 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.loader-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+  transition: 2s;
+  animation-name: loader;
+  animation-duration: 0.1s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation: loader 0.1s linear 2s 1;
+  overflow: hidden;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+  99% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid aquamarine;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   display: flex;
   flex-direction: column;
@@ -25,7 +78,7 @@ header {
 
 .reserver {
   background-color: #f6f6f6;
-  height: 340px;
+  height: 280px;
 }
 .reserver h1 {
   margin: auto;
@@ -40,7 +93,7 @@ header {
   display: flex;
   text-align: center;
   justify-content: center;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif, black;
 }
 
 .button {
@@ -80,6 +133,7 @@ h2 {
 }
 @media (min-width: 1024px) {
   .fonctionnement {
+    flex-grow: 1;
     flex-direction: row;
   }
 }
@@ -90,7 +144,7 @@ h2 {
   width: 100%;
   height: 70px;
   border-radius: 20px;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin-bottom: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
@@ -99,12 +153,13 @@ h2 {
 .group i {
   color: #7E7E7E;
   padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 @media (min-width: 1024px) {
   .group {
     margin: 30px;
     margin-left: 100px;
+    margin-right: -60px;
   }
 }
 
@@ -179,15 +234,17 @@ span {
 @media (min-width: 1024px) {
   .card {
     width: 500px;
-    height: 320px;
+    height: 280px;
   }
 }
 .card .nouveau {
   background-color: aquamarine;
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 15px;
+  top: 15px;
   padding: 5px;
+  border-radius: 5px;
+  color: #008766;
 }
 .card .like {
   position: absolute;
@@ -206,6 +263,7 @@ span {
   opacity: 0;
   -webkit-background-clip: text;
           background-clip: text;
+  z-index: 9999;
 }
 .card .like2:hover {
   opacity: 1;
@@ -231,7 +289,7 @@ span {
 @media (min-width: 1024px) {
   .card img {
     width: 100%;
-    height: 240px;
+    height: 200px;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -272,17 +330,24 @@ footer img {
 .footercontent {
   margin-left: 30px;
 }
-@media (min-width: 1024px) {
-  .footercontent {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-}
 
 #Logo {
   height: 20px;
   margin-top: 10px;
   color: white;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 
 body {
@@ -291,7 +356,7 @@ body {
 }
 
 .loader-container {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,6 +366,7 @@ body {
   height: 100%;
   background-color: aquamarine;
   transition: 2s, visibility 0.75s;
+  z-index: 9999;
 }
 
 .loader-container--hidden {
@@ -461,8 +527,11 @@ h1 {
   display: flex;
   padding-left: 15px;
 }
+.assiette .assiettedetail p {
+  flex-grow: 1;
+}
 .assiette .assiettedetail .prix {
-  padding-left: 150px;
+  padding-right: 10px;
   font-weight: bold;
 }
 @media (min-width: 1024px) {
@@ -505,6 +574,7 @@ h1 {
   margin-bottom: 50px;
   text-decoration: none;
   color: white;
+  font-weight: bold;
   border-radius: 40px;
   background-color: #9356DC;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -563,14 +633,14 @@ footer i {
   }
 }
 
-.entrees {
+.entrees .assiette {
   animation-delay: 0;
 }
 
-.plats {
+.plats .assiette {
   animation-delay: 0.5s;
 }
 
-.desserts {
+.desserts .assiette {
   animation-delay: 1s;
 }/*# sourceMappingURL=styles.css.map */
