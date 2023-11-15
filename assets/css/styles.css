@@ -261,8 +261,9 @@ span {
   right: 30px;
   bottom: 50px;
   opacity: 0;
+  background-clip: text;
   -webkit-background-clip: text;
-          background-clip: text;
+  color: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   z-index: 9999;
 }
 .card .like2:hover {
