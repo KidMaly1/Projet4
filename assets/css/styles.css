@@ -384,7 +384,21 @@ body {
   height: 100%;
   background-color: aquamarine;
   transition: 2s, visibility 0.75s;
-  z-index: 9999;
+  z-index: 100;
+  opacity: 0;
+  animation: loader 1s forwards;
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
 
 .loader-container--hidden {
@@ -573,10 +587,13 @@ h1 {
 }
 @keyframes cardprogres {
   0% {
-    transform: scaleX(0);
+    transform: translateX(-800px);
+  }
+  80% {
+    transform: translateX(-800px);
   }
   100% {
-    transform: scale(1);
+    transform: translateX(0);
   }
 }
 .assiette .assiettedetail {
