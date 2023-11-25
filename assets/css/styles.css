@@ -15,11 +15,6 @@ body {
   height: 0;
   background-color: aquamarine;
   transition: 2s;
-  animation-name: loader;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-delay: 0;
-  animation-iteration-count: 1;
   animation: loader 0.1s linear 2s 1;
   overflow: hidden;
 }
@@ -107,8 +102,10 @@ header {
   margin-top: 40px;
   text-decoration: none;
   color: white;
+  margin-bottom: 30px;
   border-radius: 40px;
   background-color: #CD69DB;
+  background: linear-gradient(193deg, #9356DC -15.4%, #FF79DA 128.93%);
   transition: opacity 0.3s;
 }
 .button:hover {
@@ -284,7 +281,7 @@ span {
 }
 .card .like2 i:hover {
   opacity: 1;
-  color: linear-gradient(193deg, #9356DC -14.44%, #FF79DA 128.93%);
+  color: linear-gradient(193deg, #9356DC -13.5%, #FF79DA 128.93%);
 }
 .card .card-text {
   position: relative;
@@ -529,7 +526,7 @@ main {
 }
 .like2 i:hover {
   opacity: 1;
-  color: linear-gradient(193deg, #9356DC -14.44%, #FF79DA 128.93%);
+  color: linear-gradient(193deg, #9356DC -13.5%, #FF79DA 128.93%);
 }
 
 h1 {
@@ -628,24 +625,6 @@ h1 {
     width: 700px;
     margin: auto;
   }
-}
-
-.button {
-  display: flex;
-  margin: auto;
-  height: 40px;
-  width: 200px;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
-  margin-top: 40px;
-  margin-bottom: 50px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  border-radius: 40px;
-  background-color: #9356DC;
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 footer {
