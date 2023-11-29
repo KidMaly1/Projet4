@@ -105,7 +105,7 @@ header {
   margin-bottom: 30px;
   border-radius: 40px;
   background-color: #CD69DB;
-  background: linear-gradient(193deg, #9356DC -15.4%, #FF79DA 128.93%);
+  background: linear-gradient(190deg, #9356DC -14%, #FF79DA 89%);
   transition: opacity 0.3s;
 }
 .button:hover {
@@ -258,7 +258,6 @@ span {
 }
 .card .like2 {
   position: absolute;
-  color: #c064db;
   width: 20px;
   height: 20px;
   right: 30px;
@@ -273,15 +272,14 @@ span {
 }
 .card .like2 i {
   opacity: 0;
-  background: #c064db;
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
   transition: all 0.5s ease 0.1s;
 }
 .card .like2 i:hover {
   opacity: 1;
-  color: linear-gradient(193deg, #9356DC -13.5%, #FF79DA 128.93%);
+  background: linear-gradient(190deg, #9356DC -14%, #FF79DA 89%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 .card .card-text {
   position: relative;
@@ -505,7 +503,6 @@ main {
 
 .like2 {
   position: absolute;
-  color: #c064db;
   padding-top: 30px;
   padding-right: 30px;
   font-size: 30px;
@@ -518,15 +515,14 @@ main {
 }
 .like2 i {
   opacity: 0;
-  background: #c064db;
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
   transition: all 0.5s ease 0.1s;
 }
 .like2 i:hover {
   opacity: 1;
-  color: linear-gradient(193deg, #9356DC -13.5%, #FF79DA 128.93%);
+  background: linear-gradient(190deg, #9356DC -14%, #FF79DA 89%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 
 h1 {
@@ -568,7 +564,6 @@ h1 {
   width: 90%;
   margin: auto;
   margin-bottom: 20px;
-  opacity: 1;
   animation: cardprogres 1s;
   transform-origin: 0% 50%;
 }
@@ -582,15 +577,29 @@ h1 {
 .assiette:hover .validatecheck {
   width: 3em;
 }
+.assiette .entrees .assiette {
+  animation: cardprogres 1s;
+  transform-origin: 0% 50%;
+}
+.assiette .plats .assiette {
+  animation: cardprogres 1s;
+  transform-origin: 0% 50%;
+}
+.assiette .desserts .assiette {
+  animation: cardprogres 1s;
+  transform-origin: 0% 50%;
+}
 @keyframes cardprogres {
   0% {
-    transform: translateX(-800px);
+    opacity: 0;
+    transform: translateX(100%);
   }
   80% {
-    transform: translateX(-800px);
+    opacity: 1;
+    transform: translateX(-10%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(1%);
   }
 }
 .assiette .assiettedetail {
@@ -681,7 +690,7 @@ footer i {
 }
 
 .entrees .assiette {
-  animation-delay: 0;
+  animation-delay: 0s;
 }
 
 .plats .assiette {

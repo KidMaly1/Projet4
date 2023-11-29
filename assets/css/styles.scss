@@ -1,6 +1,7 @@
     $primary-color: #f6f6f6;
     $clr-btn: #9356DC;
     $second-color: #EAEAEA;
+    $gradient-color: linear-gradient(190deg, #9356DC -14%, #FF79DA 89%);
 
 body {
     margin: 0;
@@ -114,7 +115,7 @@ header {
     margin-bottom: 30px;
     border-radius: 40px;
     background-color: #CD69DB;
-    background: linear-gradient(193deg, #9356DC -15.40%, #FF79DA 128.93%);;
+    background: $gradient-color;
     transition: opacity 0.3s;
     &:hover {
         opacity: 0.7;
@@ -256,7 +257,7 @@ span {
 
     .like2 {
         position: absolute;
-        color: #c064db;
+        
         width: 20px;
         height: 20px;
         right: 30px;
@@ -268,14 +269,14 @@ span {
         }
         i {
             opacity: 0;
-            background: #c064db;
             
-            background-clip: text;
-            color: transparent;
             transition: all 0.5s ease .1s;
             &:hover {
                 opacity: 1;
-                color: linear-gradient(193deg, #9356DC -13.50%, #FF79DA 128.93%);
+                background: $gradient-color;
+            
+            background-clip: text;
+            color: transparent;
             }
         }
     }
@@ -506,7 +507,6 @@ main {
 
     .like2 {
         position: absolute;
-        color: #c064db;
         padding-top: 30px;
         padding-right: 30px;
         font-size: 30px;
@@ -516,18 +516,16 @@ main {
         }
         i {
             opacity: 0;
-            background: #c064db;
             
-            background-clip: text;
-            color: transparent;
             transition: all 0.5s ease .1s;
             &:hover {
                 opacity: 1;
-                color: linear-gradient(193deg, #9356DC -13.50%, #FF79DA 128.93%);
+                background: $gradient-color;
+                background-clip: text;
+            color: transparent;
             }
         }
     }
-
     
 h1 {
     flex-grow: 1;
@@ -566,7 +564,7 @@ h1 {
     width: 90%;
     margin: auto;
     margin-bottom: 20px;
-    opacity: 1;
+    
     animation: cardprogres 1s;
     transform-origin: 0% 50%;
     h3 {
@@ -582,15 +580,32 @@ h1 {
         }
     }
 
+    .entrees .assiette {
+        animation: cardprogres 1s;
+    transform-origin: 0% 50%;
+    }
+
+    .plats .assiette {
+        animation: cardprogres 1s;
+    transform-origin: 0% 50%;
+    }
+
+    .desserts .assiette {
+        animation: cardprogres 1s;
+    transform-origin: 0% 50%;
+    }
+
     @keyframes cardprogres {
         0% {
-            transform: translateX(-800px);
+            opacity: 0;
+            transform: translateX(100%);
         }
         80% {
-            transform: translateX(-800px);
+            opacity: 1;
+            transform: translateX(-10%);
         }
         100% {
-            transform: translateX(0);
+            transform: translateY(1%);
         }
     }
 
@@ -681,12 +696,15 @@ footer {
 }
 
 .entrees .assiette {
-    animation-delay: 0;
+    
+    animation-delay: 0s;
 }
 .plats .assiette {
+    
     animation-delay: .5s;
 }
 .desserts .assiette {
+    
     animation-delay: 1s;
 }
  
